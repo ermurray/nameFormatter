@@ -35,26 +35,26 @@ describe('nameInverter', function() {
   });
   
   it('should return a empty string when passed a single honorific', function() {
-    const inputName = 'dr. ';
+    const inputName = 'Dr. ';
     const expectedOutput = '';
     assert.equal(nameInverter(inputName), expectedOutput);
   });
   
   it('should return a honnorific first-name when passed  honnorific first name', function() {
-    const inputName = 'dr. joe';
-    const expectedOutput = 'dr. joe';
+    const inputName = 'Dr. joe';
+    const expectedOutput = 'Dr. joe';
     assert.equal(nameInverter(inputName), expectedOutput);
   });
   
   it('should return a honnorific last-name, first-name when passed honnorific first-name last-name ', function() {
-    const inputName = 'dr. Joe dirt';
-    const expectedOutput = 'dr. dirt, Joe';
+    const inputName = 'Dr. Joe dirt';
+    const expectedOutput = 'Dr. dirt, Joe';
     assert.equal(nameInverter(inputName), expectedOutput);
   });
   
   it('should return a honnorific last-name, first-name when passed honnorific first-name last-name with extra white space ', function() {
-    const inputName = '    dr.    Joe  dirt   ';
-    const expectedOutput = 'dr. dirt, Joe';
+    const inputName = '    Dr.    Joe  Dirt   ';
+    const expectedOutput = 'Dr. Dirt, Joe';
     assert.equal(nameInverter(inputName), expectedOutput);
   });
 
